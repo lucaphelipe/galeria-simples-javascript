@@ -20,17 +20,16 @@ h1{
 .gallery-container{
 	max-width: 600px;
 	margin: 0 auto;
+	position: relative;
 }
 
 .img-list{
 	background: #000;
-	width: 100%;
+	width: 600px;
 	overflow: hidden;
 	border: 3px solid #000;
 	position: relative;
-	height: 0;
-	padding-bottom: 74%;
-	position: relative;
+	height: 450px;
 }
 
 .img-list img{
@@ -79,4 +78,25 @@ h1{
 
 .btns-navigation button:hover{
 	background: rgba(0,0,0,0.7);
+}
+
+.btns-pagination{
+	font-size: 0;
+	text-align: center;
+
+}
+
+.bullet{
+	border: 1px solid #000;
+	cursor: pointer;
+	border-radius: 50%;
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	text-align: center;
+	margin: 0 1px;
+}
+
+.bullet.current{
+	background: #000;
 }
