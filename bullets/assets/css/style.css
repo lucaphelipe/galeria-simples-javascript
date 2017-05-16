@@ -95,6 +95,7 @@ h1{
 	width: 10px;
 	text-align: center;
 	margin: 0 1px;
+	transition: 0.3s ease background;
 }
 
 .bullet.current{

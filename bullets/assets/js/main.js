@@ -28,6 +28,7 @@ function simpleGallery(){
 		}
 	}
 
+	//Pagination
 	function clickBullets(){
 		var bullet = document.querySelectorAll('.bullet');
 		bullet[imgActive].classList.add('current');
@@ -43,7 +44,10 @@ function simpleGallery(){
 		}));
 	}
 
+	//Cheange Images
 	function slideImage(){
+		var bullet = document.querySelectorAll('.bullet');
+
 		if(imgActive < 0){
 			imgActive = maxItens-1;
 
@@ -53,30 +57,23 @@ function simpleGallery(){
 
 		galeryItens[imgPrev].classList.remove('active');
 		galeryItens[imgActive].classList.add('active');
+
+		bullet[imgPrev].classList.remove('current');
+		bullet[imgActive].classList.add('current');
 	}
 
+	//Navigation
 	function navGallery(){
 		btnNext.addEventListener("click", function() {
-			var bullet = document.querySelectorAll('.bullet');
-		    bullet[imgActive].classList.remove('current');
-
 			imgPrev = imgActive;
 		    imgActive++;
 		    slideImage();
-
-		    bullet[imgActive].classList.add('current');
 		});
 
 		btnPrev.addEventListener("click", function() {
 		    imgPrev = imgActive;
 		    imgActive--;
-		    
-		    var bullet = document.querySelectorAll('.bullet');
-		    bullet[imgPrev].classList.remove('current');
-		    
 		    slideImage();
-
-		    bullet[imgActive].classList.add('current');
 		});
 	}
 }
